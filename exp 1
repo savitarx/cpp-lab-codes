@@ -1,0 +1,215 @@
+a)#include<iostream>
+using namespace std;
+struct details{
+    int regno;
+    char name[20];
+    char dob[10];
+    char dept[5];
+    unsigned long long number;
+    
+};
+int main()
+{
+    cout<<"enter the number of students";
+    int students;
+    cin>>students;
+    struct details a[students];
+    for(int i=0;i<students;i++)
+    {
+        cout<<"enter register number";
+        cin>>a[i].regno;
+        cout<<"enter student  name";
+        cin>>a[i].name;
+        cout<<"enter date of birth in dd/mm/yy format";
+        cin>>a[i].dob;
+        cout<<"enter the department";
+        cin>>a[i].dept;
+        cout<<"enter the number";
+        cin>>a[i].number;
+    }
+    for(int i=0;i<students;i++)
+    {
+        cout<<a[i].regno;
+        cout<<"\n";
+        cout<<a[i].name;
+         cout<<"\n";
+        cout<<a[i].dob;
+         cout<<"\n";
+        cout<<a[i].dept;
+         cout<<"\n";
+        cout<<a[i].number;
+         cout<<"\n";
+          cout<<"\n";
+    }
+    return 0;
+}
+
+b)#include<iostream>
+using namespace std;
+
+int main()
+{
+	float basicsalary, grosssalary, HRA, DA, Conveyance;
+	cout<<"Enter your basic salary : ";
+	cin>>basicsalary;
+
+	if (basicsalary>=5000)
+	{
+		HRA=0.2*basicsalary;
+		DA=1.1*basicsalary;
+		Conveyance = 500;
+	}
+	else if(basicsalary>=3000 && basicsalary<5000)
+	{	
+		HRA=0.15*basicsalary;
+		DA=1*basicsalary;
+		Conveyance = 400;
+	}
+	else
+	{
+	    cout<<"Invalid Input";
+	}
+
+	grosssalary = basicsalary+HRA+DA+Conveyance;
+	cout<<"Gross salary is : "<<grosssalary;
+
+	
+	return 0;
+}
+c)#include<iostream>
+using namespace std;
+int main(){
+    for(int i=1;i<6;i++){
+        cout<<"Pass"<<i<<':';
+        for(int i=1;i<6;i++){
+            cout<<i ;
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
+
+d)#include<iostream>
+using namespace std;
+int main(){
+    cout<<"enter 1 to check uppercase or lowercase"<<endl;
+    cout<<"enter 2 to check odd or even"<<endl;
+    int choice;
+    cin>>choice;
+    
+    
+    switch (choice){
+        case 1:{
+            cout<<"enter an alphabet"<<endl;
+            char a;
+            cin>>a;
+            if(a>=92 && a<=122){
+                cout<<"it is lower case"<<endl;
+                
+            }
+            else if(a>=65 && a<=90){
+                cout<<"it is upper case"<<endl;
+            }
+            break;
+        }
+        case 2:{
+            cout<<"enter a number"<<endl;
+            int a;
+            cin>>a;
+            if(a%2==0){
+                cout<<"it is an even number"<<endl;
+    
+            }
+            else if (a%2!=0){
+                cout<<"it is an odd number"<<endl;
+                
+            }
+            else if (a<0){
+                cout<<"enter a positive number"<<endl;
+            }
+            break;
+            
+        }
+    }
+    return 0;
+}
+
+
+
+e)#include<iostream>
+using namespace std;
+
+int main(){
+    int i;
+    for(i=1;i<=50;i++)
+    {
+        if (i%3 == 0 && i%5 ==0)
+        {
+            cout<<"FizzBuzz"<<endl;
+        }
+        else if(i%3 == 0)
+        {
+            cout<<"Fizz"<<endl;
+        }
+        else if(i%5 == 0)
+        {
+            cout<<"Buzz"<<endl;
+        }
+        else
+        {
+            cout<<i<<endl;
+        }
+    }
+    
+    return 0;
+}
+
+
+f)#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"enter a alpha numeric string";
+    char arr[20];
+    cin>>arr;
+    int count;
+    count=0;
+    for(int i=0;i<20;i++){
+        if(arr[i]=='\0'){
+            break;
+        }
+        else{
+            count=count+1;
+        }
+    }
+    char arr2[count];
+    for(int i=0;i<=count;i++)
+    {
+        arr2[i]=arr[i];
+        
+    }
+    int sum=0;
+    int count2=0;
+    for(int i=0;i<count;i++)
+    {
+        
+        if(arr2[i]>=48 && arr2[i]<=57){
+            sum=sum+arr2[i]-48;
+            count2=count2+1;
+            
+            
+        }
+        
+    }
+     
+    cout<<"the number of digits is"<<count2<<endl;
+    cout<<"the sum of the digits is"<<sum<<endl;
+   
+    return 0;
+}
+
+
+
+
+last program is costly:)
+
